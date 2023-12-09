@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 
@@ -57,13 +58,13 @@ function Header()
             </Link>
           </li>
           <li>
-            <Link href="/products" className="hover:text-gray-300 cursor-pointer">
-              Products
+            <Link href="/recipes" className="hover:text-gray-300 cursor-pointer">
+              Top Recipes
             </Link>
           </li>
           <li>
-            <Link href="/artisans" className="hover:text-gray-300 cursor-pointer">
-              Artisans
+            <Link href="/search" className="hover:text-gray-300 cursor-pointer">
+              Search
             </Link>
           </li>
           <li>

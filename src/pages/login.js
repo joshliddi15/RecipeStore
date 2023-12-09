@@ -2,7 +2,7 @@
 import React, {useState} from "react";
 import signIn from "@/firebase/auth/signin";
 import { useRouter } from 'next/navigation';
-import Layout from "../components/layouts/DefaultLayout";
+import Layout from "@/components/Layout";
 import Link from "next/link";
 
 function Login() {

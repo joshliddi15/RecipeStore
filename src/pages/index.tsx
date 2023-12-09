@@ -1,14 +1,14 @@
 import React from 'react';
-import Layout from '../components/layouts/Layout';
+import Layout from '@/components/Layout';
 import Link from 'next/link';
 import Image from 'next/image';
 
-function LandingPage () {
+function LandingPage() {
   return (
     <main className="main-section p-8">
-      <section className="mx-80 p-4 mb-6 bg-slate-500 rounded-xl">
+      <section className="mx-80 p-4 mb-6 bg-slate-300 rounded-xl">
         <Image
-          src="/Bowl.jpg"
+          src="/cooking.jpg"
           alt="Big Image"
           width={200}
           height={50}
@@ -16,16 +16,19 @@ function LandingPage () {
         />
       </section>
       <section>
-        <h1 className="text-4xl font-bold text-center mb-4">Welcome to Artisan Sales</h1>
-        <p className="text-center mb-8">Explore our products and artisans.</p>
+        <h1 className="text-4xl font-bold text-center mb-4">Discover Delicious Recipes</h1>
+        <p className="text-center mb-8">Explore a world of culinary delights from our kitchen to yours.</p>
         <nav className="flex justify-center mb-8">
           <ul className="flex space-x-4">
-            <Link href="/products" className="nav-link">Products
-            </Link>
-            <Link href="/artisans" className="nav-link">Artisans
-            </Link>
-            <Link href="/about" className="nav-link">About
-            </Link>
+            <li className="nav-link">
+              <Link href="/recipes">Top Recipes</Link>
+            </li>
+            <li className="nav-link">
+              <Link href="/search">Search</Link>
+            </li>
+            <li className="nav-link">
+              <Link href="/about">About</Link>
+            </li>
           </ul>
         </nav>
       </section>

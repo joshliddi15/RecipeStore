@@ -1,5 +1,5 @@
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
-import firebase_app from '../firebase/config';
+import firebase_app from '@/firebase/config';
 
 const storage = getStorage(firebase_app);
 

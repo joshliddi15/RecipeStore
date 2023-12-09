@@ -1,8 +1,8 @@
 'use client'
-import '../../styles/globals.css';
+import '@/styles/globals.css';
 import React, { ReactNode } from 'react';
-import Header from '../Header';
-import Footer from '../Footer';
+import Header from './Header';
+import Footer from './Footer';
 
 type LayoutProps = {
   children: ReactNode;
@@ -12,7 +12,7 @@ type LayoutProps = {
 const Layout: React.FC<LayoutProps> = ({ children}) => {
   return (
 
-      <div className="layout min-h-screen bg-sandstone">
+      <div className="layout min-h-screen bg-darkSlate">
         <Header></Header>
         {children}
         <Footer></Footer>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { getFirestore, collection, addDoc } from 'firebase/firestore';
 import firebase_app from '@/firebase/config';
-import Layout from '@/components/layouts/Layout';
+import Layout from '@/components/Layout';
 import Router from 'next/router';
 
 const db = getFirestore(firebase_app);

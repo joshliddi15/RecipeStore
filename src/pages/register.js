@@ -2,7 +2,7 @@
 import React from "react";
 import signUp from "@/firebase/auth/signup";
 import { useRouter } from 'next/navigation'
-import Layout from '../components/layouts/DefaultLayout';
+import Layout from '@/components/Layout';
 
 function Register() {
     const [email, setEmail] = React.useState('')
