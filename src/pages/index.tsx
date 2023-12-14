@@ -24,9 +24,6 @@ function LandingPage() {
               <Link href="/recipes">Top Recipes</Link>
             </li>
             <li className="nav-link">
-              <Link href="/search">Search</Link>
-            </li>
-            <li className="nav-link">
               <Link href="/about">About</Link>
             </li>
           </ul>

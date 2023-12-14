@@ -8,7 +8,7 @@ const db = getFirestore(firebase_app);
 
 interface Recipe {
   id: string;
-  name: string;
+  title: string;
   description: string;
   ingredients: { ingredient: string; measure: string; quantity: string }[];
   instructions: string;
@@ -23,7 +23,7 @@ const RecipesPage = () => {
         const querySnapshot = await getDocs(collection(db, 'Recipes'));
         const documents: Recipe[] = querySnapshot.docs.map((doc) => ({
           id: doc.id,
-          name: doc.data().name,
+          title: doc.data().title,
           description: doc.data().description,
           ingredients: doc.data().ingredients,
           instructions: doc.data().instructions,
@@ -42,13 +42,16 @@ const RecipesPage = () => {
     <div className="bg-darkSlate">
       <main className="p-8">
         <h1 className="text-4xl font-bold mb-4">Recipes Page</h1>
-        <Link href="/recipes/newRecipe" className="text-blue-600 text-lg p-5 mb-8">
+        <Link href="/recipes/newRecipe" className="text-blue-600 underline underline-offset-2 text-lg p-5 mb-8">
           Add New Recipe
         </Link>
         <section className="recipe-grid m-4 space-y-4">
           {recipes.map((recipe) => (
             <div key={recipe.id} className="recipe-card border-black outline rounded-lg p-4">
-              <h2 className="text-lg font-bold">{recipe.name}</h2>
+              <h2 className="text-lg font-bold">{recipe.title}</h2>
+              <Link href={`/recipes/${recipe.id}`} className="font-bold underline-offset-2 text-blue-600 underline">
+                Edit
+              </Link>
               <p>
                 <label className="text-md font-bold">Description: </label>
                 {recipe.description}

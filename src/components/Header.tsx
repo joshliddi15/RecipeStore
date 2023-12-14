@@ -63,11 +63,6 @@ function Header()
             </Link>
           </li>
           <li>
-            <Link href="/search" className="hover:text-gray-300 cursor-pointer">
-              Search
-            </Link>
-          </li>
-          <li>
             <Link href="/about" className="hover:text-gray-300 cursor-pointer">
               About
             </Link>
